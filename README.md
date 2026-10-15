@@ -1,4 +1,4 @@
-# iphone-screenshots
+# appstore-screenshots
 
 An agent skill that reads an iOS app from its repo and produces App Store images at the exact pixel sizes below. It follows the code when a marketing site disagrees with it.
 
@@ -7,20 +7,20 @@ An agent skill that reads an iOS app from its repo and produces App Store images
 Global, available in every project:
 
 ```bash
-npx skills add gottsohn/iphone-screenshots --global
+npx skills add gottsohn/appstore-screenshots --global
 ```
 
 One project only:
 
 ```bash
-npx skills add gottsohn/iphone-screenshots
+npx skills add gottsohn/appstore-screenshots
 ```
 
 Update and remove:
 
 ```bash
 npx skills update
-npx skills remove iphone-screenshots
+npx skills remove appstore-screenshots
 ```
 
 The resize script uses [sharp](https://sharp.pixelplumbing.com/). From the installed skill directory:

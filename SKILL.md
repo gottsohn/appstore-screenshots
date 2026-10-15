@@ -1,5 +1,5 @@
 ---
-name: iphone-screenshots
+name: appstore-screenshots
 description: >-
   Creates App Store screenshots and marketing frames from an iOS codebase.
   Reads the app UI and strings, then produces iPhone 1179×2556, iPhone

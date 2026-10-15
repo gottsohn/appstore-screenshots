@@ -1,0 +1,8 @@
+{
+  "name": "appstore-screenshots",
+  "description": "Creates App Store screenshots and marketing frames from an iOS codebase: iPhone, iPad 13-inch, open iPhone Duo, a search-results preview, and a name header.",
+  "author": {
+    "name": "gottsohn"
+  },
+  "homepage": "https://github.com/gottsohn/appstore-screenshots"
+}

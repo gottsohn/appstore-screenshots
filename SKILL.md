@@ -43,7 +43,7 @@ Compose these as SVG so the words are real text, then rasterize with the resize 
 
 ## Resize
 
-From this skill's directory, once:
+The script is `scripts/resize.mjs` next to this file. In Claude Code, `${CLAUDE_SKILL_DIR}` is that directory. From the skill directory, once:
 
 ```bash
 npm install --prefix scripts
@@ -54,6 +54,8 @@ Then, for every export:
 ```bash
 node scripts/resize.mjs --input src.jpg --width 1179 --height 2556 --output panel.png
 ```
+
+In Claude Code, prefix those paths with `${CLAUDE_SKILL_DIR}/`.
 
 `--fit` is `cover` (default), `fill`, or `contain`. Use `fill` for `iphone-landscape`. The script refuses an output whose pixel size is wrong or that still has an alpha channel.
 

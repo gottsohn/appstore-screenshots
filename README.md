@@ -4,6 +4,8 @@ An agent skill that reads an iOS app from its repo and produces App Store images
 
 ## Install
 
+### Cursor and other agents
+
 Global, available in every project:
 
 ```bash
@@ -22,6 +24,31 @@ Update and remove:
 npx skills update
 npx skills remove appstore-screenshots
 ```
+
+### Claude Code
+
+The same installer, aimed at Claude Code:
+
+```bash
+npx skills add gottsohn/appstore-screenshots -a claude-code --global
+```
+
+That copies the skill to `~/.claude/skills/appstore-screenshots/`. Drop `--global` to install it into the current project's `.claude/skills/` instead.
+
+Claude Code can also install this repo as a plugin. In a Claude Code session:
+
+```text
+/plugin marketplace add gottsohn/appstore-screenshots
+/plugin install appstore-screenshots@appstore-screenshots
+```
+
+Or from the shell, without opening a session:
+
+```bash
+claude plugin install appstore-screenshots --marketplace gottsohn/appstore-screenshots
+```
+
+After a plugin install, the skill is available as `/appstore-screenshots:appstore-screenshots`. Remove it later with `/plugin uninstall appstore-screenshots@appstore-screenshots`.
 
 The resize script uses [sharp](https://sharp.pixelplumbing.com/). From the installed skill directory:
 
@@ -70,6 +97,7 @@ PNGs are flattened and have no alpha channel.
 ## What the skill contains
 
 - `SKILL.md` tells the agent the workflow.
+- `.claude-plugin/` is the Claude Code plugin manifest, so the repo can be installed with `/plugin`.
 - `references/` holds research order, device frames, image prompts, and the two marketing layouts.
 - `scripts/resize.mjs` writes the exact pixel size.
 

@@ -42,6 +42,10 @@ Other official Duo slots, only when the user names them:
 | Inner portrait | 2007 × 2853 |
 | Inner landscape | 2853 × 2007 |
 
+## App preview video
+
+Preview pixels are not the PNG sizes above. Sizes, storyboard, and encode: [preview.md](preview.md).
+
 ## Failures to refuse
 
 - A portrait phone floating inside a landscape banner.

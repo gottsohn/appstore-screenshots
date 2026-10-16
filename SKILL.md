@@ -1,12 +1,14 @@
 ---
 name: appstore-screenshots
 description: >-
-  Creates App Store screenshots and marketing frames from an iOS codebase.
-  Reads the app UI and strings, then produces iPhone 1179×2556, iPhone
-  landscape 2556×1179, iPad 13-inch 2048×2732, and open iPhone Duo 2034×1398
-  screenshots, plus a 3840×2560 search-results preview and a 3840×1646 name
-  header. Use when the user asks for App Store screenshots, a search results
-  preview, a name header, iPhone, iPad 13, or iPhone Duo marketing images.
+  Creates App Store screenshots, marketing frames, and an opt-in preview
+  video from an iOS codebase. Reads the app UI and strings, then produces
+  iPhone 1179×2556, iPhone landscape 2556×1179, iPad 13-inch 2048×2732, and
+  open iPhone Duo 2034×1398 screenshots, plus a 3840×2560 search-results
+  preview and a 3840×1646 name header. When asked, also renders an App Store
+  preview video at 886×1920 (iPad 1200×1600, landscape 1920×886). Use when
+  the user asks for App Store screenshots, a search results preview, a name
+  header, an app preview video, iPhone, iPad 13, or iPhone Duo marketing images.
 ---
 
 # App Store screenshots
@@ -23,7 +25,7 @@ Read the iOS repo you are in. Do not reuse another app's headlines, colors, or p
 6. Resize with this skill's `scripts/resize.mjs`. Flatten onto black and strip alpha.
 7. Write PNGs into the app repo at `.shots/runs/<device>-<width>x<height>/<locale>/`.
 
-Default run: all four devices, the user's primary locale first, then each other locale they named. A named device, the search-results preview, or the name header is only that asset.
+Default run: all four devices, the user's primary locale first, then each other locale they named. A named device, the search-results preview, the name header, or the preview video is only that asset.
 
 ## Devices
 
@@ -40,6 +42,12 @@ Compose these as SVG so the words are real text, then rasterize with the resize 
 
 - Search results, `3840 × 2560`: [references/search-results.md](references/search-results.md)
 - Name header, `3840 × 1646`: [references/header.md](references/header.md)
+
+## App preview video
+
+Only when the user asks for an app preview, a preview video, or a product-page video. Follow [references/preview.md](references/preview.md).
+
+The video is the app UI at Apple's accepted preview size, with the same four headlines. Default is iPhone portrait 886×1920. Compose it in Hyperframes so the type is real text. Do not pan the PNG screenshots, and do not use the image tool.
 
 ## Resize
 
@@ -67,3 +75,5 @@ In Claude Code, prefix those paths with `${CLAUDE_SKILL_DIR}/`.
 - Landscape frames are the screen, not a portrait phone in a banner.
 - The Duo is open, not folded.
 - Search-results streaks stop before the phone. Header streaks pass above and below the name.
+- A preview video matches 886×1920, 1920×886, or 1200×1600, lasts 15–30 seconds, and its poster is the settled frame at 5 seconds.
+- Preview copy uses that locale's strings.

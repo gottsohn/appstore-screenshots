@@ -1,6 +1,6 @@
 {
   "name": "appstore-screenshots",
-  "description": "App Store screenshot skill for iPhone, iPad 13-inch, and iPhone Duo.",
+  "description": "App Store screenshot skill for iPhone, iPad 13-inch, and iPhone Duo, plus an opt-in App Store preview video.",
   "owner": {
     "name": "gottsohn"
   },
@@ -8,7 +8,7 @@
     {
       "name": "appstore-screenshots",
       "source": "./",
-      "description": "Creates App Store screenshots and marketing frames from an iOS codebase.",
+      "description": "Creates App Store screenshots, marketing frames, and an opt-in App Store preview video from an iOS codebase.",
       "homepage": "https://github.com/gottsohn/appstore-screenshots"
     }
   ]

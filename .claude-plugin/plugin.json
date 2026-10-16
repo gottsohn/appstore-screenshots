@@ -1,6 +1,6 @@
 {
   "name": "appstore-screenshots",
-  "description": "Creates App Store screenshots and marketing frames from an iOS codebase: iPhone, iPad 13-inch, open iPhone Duo, a search-results preview, and a name header.",
+  "description": "Creates App Store screenshots and marketing frames from an iOS codebase: iPhone, iPad 13-inch, open iPhone Duo, a search-results preview, a name header, and an opt-in App Store preview video.",
   "author": {
     "name": "gottsohn"
   },
